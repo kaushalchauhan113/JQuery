@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#b1").click(function(){
+                $("#t1").fadeOut("slow" , function(){
+                    $("#t2").fadeIn("slow", function(){
+                        $("#b1").click(function(){
+                            $("#t2").fadeOut("slow", function(){
+                                $("#t3").fadeIn("slow", function(){
+                                    alert("Image slide is over now refresh the page or move to next content");
+                                    $("#b1").attr("disabled",true);
+                                });
+                            });
+                        });
+                    });
+                });
+            });
+        });
+    </script>
+    <style>
+        #b1{
+            margin: 8px;
+        }
+        #t1 {
+            height: 170px;
+            width: 130px;
+        }
+        #t2 {
+            height: 170px;
+            width: 130px;
+            display: none;
+        }
+        #t3 {
+            height: 170px;
+            width: 130px;
+            display: none;
+        }
+    </style>
+    <title>
+        fadeIn and fadeOut
+    </title>
+</head>
+<body>
+    <button type="button" id="b1" class="btn btn-outline-warning">Start</button>
+    <br>
+    <img src="https://technokrats.in/wp-content/uploads/2020/11/Content1-7.png" id="t1" alt="">
+    <img src="https://avatars.githubusercontent.com/u/70142?s=280&v=4" id="t2" alt="">
+    <img src="https://miro.medium.com/max/1024/1*tsqlgfBBb32ZLx1Y6bwzKA.jpeg" id="t3" alt="">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
