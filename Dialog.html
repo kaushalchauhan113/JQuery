@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Dialog functionality</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      
+      <style>
+         .ui-widget-header,.ui-state-default, ui-button {
+            background:#03e5f9;
+            border: 1px solid #022c54;
+            color: #400ad2;
+            font-weight: bold;
+         }
+      </style>
+      
+      <script>
+         $(function() {
+            $( "#dialog-1" ).dialog({
+               autoOpen: true,  
+            });
+            $( "#opener" ).click(function() {
+               $( "#dialog-1" ).dialog( "open" );
+            });
+         });
+      </script>
+   </head>
+   
+   <body>
+      <!-- HTML --> 
+      <div id = "dialog-1" 
+         title = "jquery-ui"><img src="New folder/main_image.png"></div>
+      <button id = "opener">Touch</button>
+   </body>
+</html>
